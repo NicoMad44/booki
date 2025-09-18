@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin:0;
 }
 
 .main-container {
@@ -64,29 +65,150 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 79px;
+    margin-bottom: 30px;
 }
 
 .navLogo {
-    width: 61px;
-    height: 19px;
-    padding: 30px 50px 30px 50px;
+    width: 61.9px;
+    padding: 30px 0px 30px 0px;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-right:16px;
 }
 
 .linkMenu{
     padding-top: 20px;
-    border-top: 2px white solid;
     margin: 0px 34px 0px 34px;
 }
 
 .linkMenu:hover{
     border-top: 2px var(--main-color) solid;
+}
+
+/****** searchAndFilter ***********/
+
+.searchAndFilter{
+    margin-bottom: 35px;
+}
+
+.textAboveSearchBar{
+    margin-bottom: 35px;
+}
+
+.searchAndFilter {
+    margin-top:10px;
+}
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 35px;
+    height: 45px;
+}
+
+.searchBar_IconBox{
+    background-color: var(--main-bg-color);
+    height: inherit;
+    width: 50px;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar input{
+    height: inherit;
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    font-weight: 600;
+    color: black;
+    text-align: center;
+  
+}
+
+.searchBar_Button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 49px;     /* could not use inherit, otherwise border not aligned with previous elements*/
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 0px 15px 15px 0px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.magnifyingGlass{
+    display: none;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+}
+
+.filter p{
+    margin:0;
+    margin-right: 15px;
+}
+
+.filterButtonZone{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.filterButton{
+    padding: 4px 19px 4px 19px;
+    height: 38px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 25px;
+}
+
+.filterButton:hover{
+    background-color: var(--filter-bg-color);
+}
+
+.filterButton i{ /* this are for the icon "i" of the button*/
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.textUnderFilter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+}
+
+.textUnderFilter i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid var(--main-bg-color);
+    font-size: 12px;
+    padding:5px;
+    margin-right: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -160,6 +282,20 @@ nav {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    
+    /* Filter */
+
+    .filter{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter h3{
+        margin-bottom: 20px; /* this is to ensure the gap between the word "filter" and the first filter button is 20px as per figma*/
+    }
+    
+    
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -194,5 +330,43 @@ nav {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    /****** Nav ***********/
+    nav{
+        height: auto;
+        display: flex;
+        flex-direction: column;  /* change flex direction so that the links are below logo in mobile screen*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    .linkMenu{
+        padding-bottom: 20px;
+        border-top: 2px white solid;
+        margin: 0px 34px 0px 34px;
+        width: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .linkMenu:hover{
+        border-bottom: 2px var(--main-color) solid;
+        border-top: none;
+
+    }
+
+    /****** searchAndFilter ***********/
+    /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
+    .magnifyingGlass{
+        display: flex;
+    }
+    .wordRechercher{
+        display: none;
+    }
+    /* to change the border radius of the button on small screen */
+    .searchBar_Button{
+        border-radius: 15px 15px 15px 15px;
+    }
+
+
 }
