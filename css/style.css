@@ -15,8 +15,9 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin:0;
+
 }
 
 .main-container {
@@ -67,6 +68,7 @@ nav {
     justify-content: space-between;
     height: 79px;
     margin-bottom: 30px;
+    padding: 0 50px;
 }
 
 .navLogo {
@@ -97,10 +99,6 @@ nav {
 
 .textAboveSearchBar{
     margin-bottom: 35px;
-}
-
-.searchAndFilter {
-    margin-top:10px;
 }
 
 .searchBar{
@@ -168,6 +166,7 @@ nav {
 .filterButtonZone{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     
 }
@@ -179,7 +178,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
 }
@@ -291,7 +290,7 @@ nav {
         align-items: flex-start;
     }
 
-    .filter h3{
+    .filter p{
         margin-bottom: 20px; /* this is to ensure the gap between the word "filter" and the first filter button is 20px as per figma*/
     }
     
@@ -331,20 +330,30 @@ nav {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
+    .main-container{
+        padding: 0 10px;
+    }
+
+
     /****** Nav ***********/
     nav{
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;  /* change flex direction so that the links are below logo in mobile screen*/
         justify-content: center;
         align-items: center;
+        padding: 0;
+    }
+
+    .menu{
+        width: 100%;
     }
 
     .linkMenu{
         padding-bottom: 20px;
-        border-top: 2px white solid;
-        margin: 0px 34px 0px 34px;
-        width: auto;
+        margin: 0;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
     }
@@ -356,6 +365,19 @@ nav {
     }
 
     /****** searchAndFilter ***********/
+    
+    /* this is for the search bar to take the full available length of the mobile screen*/
+    .searchBar input{
+        width: 100%;
+    }
+
+    /* this is for the filter button to appear in a nice 2 by 2 grid in mobile mode*/
+    .filterButtonZone{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
     .magnifyingGlass{
         display: flex;
