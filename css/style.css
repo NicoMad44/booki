@@ -85,7 +85,7 @@ nav {
     margin: 0px 34px 0px 34px;
 }
 
-.activeLink{
+.linkMenu:hover{
     border-top: 2px var(--main-color) solid;
 }
 
