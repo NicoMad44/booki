@@ -107,6 +107,7 @@ nav {
     align-items: center;
     margin-bottom: 35px;
     height: 45px;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .searchBar_IconBox{
@@ -129,21 +130,19 @@ nav {
     font-weight: 600;
     color: black;
     text-align: center;
-  
 }
 
 .searchBar_Button{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: inherit;     
+    height: inherit;    
     background-color: var(--main-color);
     color: white;
     border: 1px solid var(--main-color);
     border-radius: 0px 15px 15px 0px;
     font-weight: 600;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0px 16px 0px 16px;
     box-sizing: content-box; /*to ensure that the border will aligned with the input field and the icon box border*/
 }
 
@@ -159,6 +158,11 @@ nav {
     margin-bottom: 35px;
 }
 
+.filterButton-text{
+    font-size: 16px;
+    font-weight: 700;
+    margin:0;
+}
 
 .filterButtonZone{
     display: flex;
@@ -178,12 +182,6 @@ nav {
     justify-content: flex-start;
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
-}
-
-.filterButton-text{
-    font-size: 16px;
-    font-weight: 700;
-    margin:0;
 }
 
 .filterButton:hover{
@@ -424,9 +422,17 @@ nav {
        padding: 0 15px;
     }
 
+    .searchBar{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
     /* this is for the search bar to take the full available length of the mobile screen*/
     .searchBar input{
         width: 100%;
+    }
+
+    .searchBar_Button{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     /* this is for the filter button to appear in a nice 2 by 2 grid in mobile mode*/
