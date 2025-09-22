@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin:0;
-    min-width: 1164px; /* this is to ensure that the content of the card (hebergement) is not overspilling outside the card frame*/
+    min-width: 1164px; /*-*-*-*---> this is to ensure that the content of the card (hebergement) is not overspilling outside the card frame*/
     gap:30px;
 }
 
@@ -80,7 +80,6 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     height: 79px;
-
     padding: 0 50px;
 }
 
@@ -118,8 +117,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 49px;
-   
+    height: 49px; 
 }
 
 .searchBar-iconBox{
@@ -131,7 +129,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; /*to ensure that the border will aligned*/
+    box-sizing: border-box; /*-*-*-*---> to ensure that the border will aligned*/
 }
 form{
     display: flex;
@@ -152,7 +150,7 @@ form{
     font-weight: 600;
     color: black;
     text-align: center;
-    box-sizing: border-box; /*to ensure that the border will aligned */
+    box-sizing: border-box; /*-*-*-*---> to ensure that the border will aligned */
 }
 
 .searchBar-button{
@@ -166,7 +164,7 @@ form{
     border-radius: 0px 15px 15px 0px;
     font-weight: 600;
     padding: 0px 16px 0px 16px;
-    box-sizing: border-box;  /*to ensure that the border will aligned with the input field and the icon box border*/
+    box-sizing: border-box;  /*-*-*-*---> to ensure that the border will aligned with the input field and the icon box border*/
 }
 
 .searchBar-button--magnifyingGlass{
@@ -515,7 +513,7 @@ footer{
     }
 
     .searchBar-button{
-        margin-left: -15px; /*allow for the input field border to meet the top of the button */
+        margin-left: -15px; /*-*-*-*----> allow for the input field border to meet the top of the button */
         border-radius: 15px 15px 15px 15px;     /* to change the border radius of the button on small screen */
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
