@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 1164px; /* this is to ensure that the content of the card (hebergement) is not overspilling outside the card frame*/
 }
 
 .main-container {
@@ -380,6 +381,18 @@ footer{
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
+/* Large devices (big screen > 1440px)  => this is to ensure that the content of the page remain centered and auto margin*/ 
+@media (min-width:1440px){
+    body{
+        max-width: 1440px;
+        margin:auto;
+    }
+}
+
+
+
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
@@ -430,7 +443,7 @@ footer{
 @media (max-width: 767.98px) {
 
     body{
-        margin:0;
+        min-width: 320px;
     }
     
     .main-container{
