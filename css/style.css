@@ -133,13 +133,18 @@ nav {
     align-items: center;
     box-sizing: border-box; /*to ensure that the border will aligned*/
 }
+form{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    width: 100%;
+}
 
 .searchBar label{
     display: none;
 }
 
 .searchBar input{
-    height: inherit;
     border-right: 0;
     border-left: 0;
     border-top: 1px solid var(--main-bg-color);
@@ -505,7 +510,7 @@ footer{
     }
     
     /* this is for the search bar to take the full available length of the mobile screen*/
-    .searchBar input{
+    #searchInput{
         width: 100%;
     }
 
