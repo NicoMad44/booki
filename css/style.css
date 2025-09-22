@@ -42,7 +42,6 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -81,11 +80,11 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 68px;
 }
 
 .menu-link{
     padding-top: 20px;
-    margin: 0px 0px 0px 68px;
 }
 
 .menu-link:hover{
@@ -107,12 +106,8 @@ nav {
     flex-direction: row;
     align-items: center;
     margin-bottom: 35px;
-    height: 45px;
-    border-radius: 15px 15px 15px 15px;
-}
-
-.searchBar label{
-    display: none;
+    height: 49px;
+   
 }
 
 .searchBar-iconBox{
@@ -124,6 +119,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box; /*to ensure that the border will aligned*/
+}
+
+.searchBar label{
+    display: none;
 }
 
 .searchBar input{
@@ -135,6 +135,7 @@ nav {
     font-weight: 600;
     color: black;
     text-align: center;
+    box-sizing: border-box; /*to ensure that the border will aligned */
 }
 
 .searchBar-button{
@@ -148,7 +149,7 @@ nav {
     border-radius: 0px 15px 15px 0px;
     font-weight: 600;
     padding: 0px 16px 0px 16px;
-    box-sizing: content-box; /*to ensure that the border will aligned with the input field and the icon box border*/
+    box-sizing: border-box;  /*to ensure that the border will aligned with the input field and the icon box border*/
 }
 
 .searchBar-button--magnifyingGlass{
@@ -202,17 +203,19 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 24px;
+    font-size: 16px;
 }
 
 .searchAndFilter-subText i{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 24px;
+    width: 24px;
     border-radius: 100%;
     border: 1px solid var(--main-bg-color);
-    font-size: 12px;
-    padding:5px;
+    font-size: 16px;
+    padding: 5px;
     margin-right: 10px;
 }
 
@@ -472,7 +475,6 @@ footer{
 
     .menu-link{
         padding-bottom: 20px;
-        margin: 0;
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -489,18 +491,26 @@ footer{
     .searchAndFilter{
        padding: 0 15px;
     }
-
-    .searchBar{
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    }
     
     /* this is for the search bar to take the full available length of the mobile screen*/
     .searchBar input{
         width: 100%;
+        border-radius: 0 -15px -15px 0;
     }
 
     .searchBar-button{
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        margin-left: -15px; /*allow for the input field border to meet the top of the button
+        border-radius: 15px 15px 15px 15px;     /* to change the border radius of the button on small screen */
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
+    .searchBar-button--magnifyingGlass{
+        display: flex;
+    }
+
+    .searchBar-button--wordRechercher{
+        display: none;
     }
 
     /* this is for the filter button to appear in a nice 2 by 2 grid in mobile mode*/
@@ -521,20 +531,6 @@ footer{
         font-size: 14px;
         font-weight: 700;
         margin:0;
-    }
-
-    /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
-    .searchBar-button--magnifyingGlass{
-        display: flex;
-    }
-
-    .searchBar-button--wordRechercher{
-        display: none;
-    }
-
-    /* to change the border radius of the button on small screen */
-    .searchBar-button{
-        border-radius: 15px 15px 15px 15px;
     }
 
     /* this is to change the order between populaire and hebergement section*/
