@@ -495,7 +495,6 @@ footer{
     /* this is for the search bar to take the full available length of the mobile screen*/
     .searchBar input{
         width: 100%;
-        border-radius: 0 -15px -15px 0;
     }
 
     .searchBar-button{
