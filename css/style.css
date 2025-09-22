@@ -83,12 +83,12 @@ nav {
     justify-content: space-evenly;
 }
 
-.linkMenu{
+.menu-link{
     padding-top: 20px;
     margin: 0px 0px 0px 68px;
 }
 
-.linkMenu:hover{
+.menu-link:hover{
     border-top: 2px var(--main-color) solid;
 }
 
@@ -98,7 +98,7 @@ nav {
     margin-bottom: 35px;
 }
 
-.textAboveSearchBar{
+.searchAndFilter-title{
     margin-bottom: 35px;
 }
 
@@ -115,7 +115,7 @@ nav {
     display: none;
 }
 
-.searchBar_IconBox{
+.searchBar-iconBox{
     background-color: var(--main-bg-color);
     height: inherit;
     width: 50px;
@@ -137,7 +137,7 @@ nav {
     text-align: center;
 }
 
-.searchBar_Button{
+.searchBar-button{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -151,7 +151,7 @@ nav {
     box-sizing: content-box; /*to ensure that the border will aligned with the input field and the icon box border*/
 }
 
-.magnifyingGlass{
+.searchBar-button--magnifyingGlass{
     display: none;
 }
 
@@ -163,13 +163,13 @@ nav {
     margin-bottom: 35px;
 }
 
-.filterButton-text{
+.filter-button--text{
     font-size: 16px;
     font-weight: 700;
     margin:0;
 }
 
-.filterButtonZone{
+.filter-buttonZone{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -177,7 +177,7 @@ nav {
     
 }
 
-.filterButton{
+.filter-button{
     padding: 4px 19px 4px 19px;
     height: 38px;
     margin-right: 15px;
@@ -189,23 +189,23 @@ nav {
     border-radius: 25px;
 }
 
-.filterButton:hover{
+.filter-button:hover{
     background-color: var(--filter-bg-color);
 }
 
-.filterButton i{ /* this are for the icon "i" of the button*/
+.filter-button i{ /* this are for the icon "i" of the button*/
     font-size: 22px;
     margin-right: 10px;
 }
 
-.textUnderFilter{
+.searchAndFilter-subText{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 24px;
 }
 
-.textUnderFilter i{
+.searchAndFilter-subText i{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,7 +470,7 @@ footer{
         width: 100%;
     }
 
-    .linkMenu{
+    .menu-link{
         padding-bottom: 20px;
         margin: 0;
         width: 100%;
@@ -479,7 +479,7 @@ footer{
         border-bottom: 1px var(--main-bg-color) solid;
     }
     
-    .linkMenu:hover{
+    .menu-link:hover{
         border-bottom: 2px var(--main-color) solid;
         border-top: none;
     }
@@ -499,41 +499,41 @@ footer{
         width: 100%;
     }
 
-    .searchBar_Button{
+    .searchBar-button{
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     /* this is for the filter button to appear in a nice 2 by 2 grid in mobile mode*/
-    .filterButtonZone{
+    .filter-buttonZone{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     /*this it to reduce the gap between the filter button using a smaller margin as well as add a bottom margin for space betwen 1st and 2nd line of filter*/
 
-    .filterButton{
+    .filter-button{
         margin-right:10px;
         margin-bottom: 20px;
     }
 
     /* this is to reduce the size of the filter text*/
-    .filterButton-text{
+    .filter-button--text{
         font-size: 14px;
         font-weight: 700;
         margin:0;
     }
 
     /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
-    .magnifyingGlass{
+    .searchBar-button--magnifyingGlass{
         display: flex;
     }
 
-    .wordRechercher{
+    .searchBar-button--wordRechercher{
         display: none;
     }
 
     /* to change the border radius of the button on small screen */
-    .searchBar_Button{
+    .searchBar-button{
         border-radius: 15px 15px 15px 15px;
     }
 
