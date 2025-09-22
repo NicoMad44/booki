@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin:0;
     min-width: 1164px; /* this is to ensure that the content of the card (hebergement) is not overspilling outside the card frame*/
     gap:30px;
 }
@@ -45,6 +46,7 @@ a {
 .subSection-title{
     font-size: 18px;
     font-weight: 700;
+    margin:0;
 
 }
 
@@ -374,6 +376,7 @@ footer{
     background-color: var(--main-bg-color);
     display: flex;
     flex-direction: row;
+    margin:0 50px 0 50px;
 }
 
 .footerMenu{
@@ -527,13 +530,6 @@ footer{
         grid-template-columns: 1fr 1fr;
     }
 
-    /*this it to reduce the gap between the filter button using a smaller margin as well as add a bottom margin for space betwen 1st and 2nd line of filter*/
-
-    .filter-button{
-        margin-right:10px;
-        margin-bottom: 20px;
-    }
-
     /* this is to reduce the size of the filter text*/
     .filter-button--text{
         font-size: 14px;
@@ -575,8 +571,8 @@ footer{
     .populaires-cards {
         display: flex;
         flex-direction: column;
-        
     }
+
     .populaires-cards a {
         width: 100%;
     }
@@ -596,6 +592,7 @@ footer{
 
     footer{
         flex-direction: column;
+        margin:0;
     }
 
     .footerMenu{
