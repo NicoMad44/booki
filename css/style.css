@@ -217,6 +217,7 @@ form{
     justify-content: flex-start;
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
+    box-sizing: border-box;
 }
 
 .filter-button:hover{
@@ -546,7 +547,7 @@ footer{
     }
 
     .filter-button{
-        width: 35%;
+        width: 48%;
     }
 
     /* this is to reduce the size of the filter text*/
