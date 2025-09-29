@@ -179,6 +179,7 @@ form{
     border-radius: 0px 15px 15px 0px;
     font-weight: 600;
     padding: 0px 16px 0px 16px;
+    cursor: pointer;
     box-sizing: border-box;  /*-*-*-*---> to ensure that the border will aligned with the input field and the icon box border*/
 }
 
@@ -218,6 +219,7 @@ form{
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .filter-button:hover{
