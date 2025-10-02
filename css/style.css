@@ -104,11 +104,12 @@ header{
     width: 61.9px;
 }
 
-nav {
+
+#nav-menu{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    list-style: none;
     gap: 68px;
+    justify-content: space-evenly;
     font-size: 16px;
     font-weight: 400;
     height:100%;
@@ -202,12 +203,6 @@ form{
     gap:10px;
 }
 
-.filter-button--text{
-    font-size: 16px;
-    font-weight: 700;
-    margin:0;
-}
-
 .filter-buttonZone{
     display: flex;
     flex-direction: row;
@@ -227,6 +222,8 @@ form{
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .filter-button:hover{
@@ -421,7 +418,11 @@ footer{
     background-color: var(--main-bg-color);
     width:33%;
     padding: 20px;
-    gap:15px;
+}
+.footerMenuList{
+    list-style: none;
+    padding: 0;
+    margin:0;
 }
 
 .footerMenu-title{
@@ -429,7 +430,7 @@ footer{
 }
 
 .footerMenu-item{
-    margin:0;
+    margin:15px 0 15px 0;
 }
 
 
@@ -503,17 +504,22 @@ footer{
         padding: 0
     }
 
-    nav {
+    nav{
+        width: 100%;
+    }
+
+    #nav-menu{
         gap:0;
         width:100%;
         margin-top:25px;
+        padding: 0;
     }
 
     .nav-link{
         width: 100%;
         text-align: center;
-        padding: 0 0 20px 0;
-        border-bottom: 1px var(--main-bg-color) solid;
+        padding: 0;
+        border-bottom: 2px var(--main-bg-color) solid;
     }
     
     .nav-link:hover{
@@ -559,13 +565,8 @@ footer{
 
     .filter-button{
         width: 48%;
-    }
-
-    /* this is to reduce the size of the filter text*/
-    .filter-button--text{
         font-size: 14px;
         font-weight: 700;
-        margin:0;
     }
 
     /* this is to change the order between populaire and hebergement section*/
