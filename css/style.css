@@ -317,7 +317,7 @@ form{
     margin-top: 0px;;
 }
 
-.hebergements-cards .card-rating {
+.card-rating {
     margin-bottom: 5px;
 }
 
@@ -367,9 +367,6 @@ form{
     margin: 0;
 }
 
-.populaires-cards .card-rating {
-    margin-bottom: 5px;
-}
 
 /****** Activities ***********/
 
