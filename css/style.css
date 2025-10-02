@@ -416,7 +416,7 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
-    width:33%;
+    width:33.33%;
     padding: 20px;
 }
 .footerMenuList{
