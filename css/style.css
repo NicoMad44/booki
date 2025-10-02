@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -17,17 +18,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin:0;
     gap:30px;
+    width:100%;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
+.container{
     width: 100%;
     max-width: 1440px;
+    margin: auto;
     padding: 0 50px;
-    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
     gap:35px;
 }
 
@@ -82,8 +88,6 @@ a {
 
 /****** navigation ***********/
 
-
-
 header{
     display: flex;
     flex-direction: row;
@@ -91,6 +95,9 @@ header{
     align-items: center;
     height: 79px;
     padding: 0 50px;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
 }
 
 .logo {
@@ -135,6 +142,12 @@ nav {
     color: black;
 }
 
+.fa-magnifying-glass{
+    color: white;
+    font-size: 17px;
+    display: none;
+}
+
 .searchBar-iconBox{
     background-color: var(--main-bg-color);
     height: inherit;
@@ -144,7 +157,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; /*-*-*-*---> to ensure that the border will aligned*/
 }
 form{
     display: flex;
@@ -165,7 +177,6 @@ form{
     font-weight: 600;
     color: black;
     text-align: center;
-    box-sizing: border-box; /*-*-*-*---> to ensure that the border will aligned */
 }
 
 .searchBar-button{
@@ -180,11 +191,6 @@ form{
     font-weight: 600;
     padding: 0px 16px 0px 16px;
     cursor: pointer;
-    box-sizing: border-box;  /*-*-*-*---> to ensure that the border will aligned with the input field and the icon box border*/
-}
-
-.searchBar-button--magnifyingGlass{
-    display: none;
 }
 
 .filter{
@@ -218,7 +224,6 @@ form{
     justify-content: flex-start;
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
-    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -262,7 +267,7 @@ form{
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
+
 }
 
 /****** Hebergements ***********/
@@ -283,7 +288,6 @@ form{
 
 .hebergements-cards a{
     width: 30%;
-    box-sizing: border-box;
 }
 
 .hebergements-cards .card{
@@ -353,7 +357,6 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
@@ -405,15 +408,14 @@ form{
 /****** Footer ***********/
 
 footer{
-    background-color: var(--main-bg-color);
     display: flex;
     flex-direction: row;
-    margin:0 50px 0 50px;
 }
 
 .footerMenu{
     display: flex;
     flex-direction: column;
+    background-color: var(--main-bg-color);
     width:33%;
     padding: 20px;
     gap:15px;
@@ -432,14 +434,6 @@ footer{
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-
-/* Large devices (big screen > 1440px)  => this is to ensure that the content of the page remain centered and auto margin*/ 
-@media (min-width:1440px){
-    body{
-        max-width: 1440px;
-        margin:auto;
-    }
-}
 
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -497,12 +491,12 @@ footer{
 
     /****** Nav ***********/
 
-    header{
+    header.container{
         display: flex;
         flex-direction: column;  /* change flex direction so that the links are below logo in mobile screen*/
         justify-content: center;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 30px;
         padding: 0
     }
 
@@ -543,8 +537,9 @@ footer{
     }
 
     /* to make sure that the magnifying glass appear on small screen and the word "rechercher" desapear*/
-    .searchBar-button--magnifyingGlass{
-        display: flex;
+    .fa-magnifying-glass{
+        display: inline-block;
+        color:white;
     }
 
     .searchBar-button--wordRechercher{
@@ -578,7 +573,6 @@ footer{
     .hebergements-and-populaires section {
         border-radius: 0px;
         padding: 30px;
-        box-sizing: border-box;
     }
 
     /***** Hebergements section *****/
@@ -631,14 +625,13 @@ footer{
 
     /****** Footer ***********/
 
-    footer{
+    footer.container{
         flex-direction: column;
-        margin:0;
+        padding: 0;
     }
 
     .footerMenu{
         width: 100%;
-        box-sizing: border-box;
     }
 
 }
