@@ -104,19 +104,24 @@ header{
     width: 61.9px;
 }
 
+nav{
+    height: 100%;
+}
 
 #nav-menu{
     display: flex;
     list-style: none;
     gap: 68px;
     justify-content: space-evenly;
+    align-items: center;
     font-size: 16px;
     font-weight: 400;
     height:100%;
+    margin:0;
 }
 
 .nav-link{
-    padding-top: 20px;
+    padding-top: 26px;
     border-top: 2px transparent solid;
 }
 
